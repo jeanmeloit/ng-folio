@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+// themes - our custom or/and out of the box themes
+@import 'src/assets/scss/style.scss';
+
+.scrollable-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.min-8 {
+  min-height: 8vh;
+}
+
+.mt-08r {
+  margin-top: 0.8rem !important;
+}
+
+body {
+  overflow: hidden;
+}
