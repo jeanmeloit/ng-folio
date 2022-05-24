@@ -1,0 +1,63 @@
+<div class="container-fluid py-5" id="skill">
+  <div class="container">
+    <div
+      class="position-relative d-flex align-items-center justify-content-center"
+    >
+      <h1
+        class="display-1 text-uppercase text-white"
+        style="-webkit-text-stroke: 1px #dee2e6"
+      >
+        Skills
+      </h1>
+      <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="skill mb-4" *ngFor="let hard of hardSkills">
+          <div class="d-flex justify-content-between">
+            <h6 class="font-weight-bold">{{ hard.name }}</h6>
+            <h6 class="font-weight-bold">{{ hard.percentual }}%</h6>
+          </div>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              [ngClass]="{
+                'bg-primary': hard.percentual >= 85,
+                'bg-warning': hard.percentual >= 75 && hard.percentual < 85,
+                'bg-danger': hard.percentual < 75
+              }"
+              [ngStyle]="{ width: hard.percentual + '%' }"
+              role="progressbar"
+              aria-valuenow="95"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill mb-4" *ngFor="let soft of softSkills">
+          <div class="d-flex justify-content-between">
+            <h6 class="font-weight-bold">{{ soft.name }}</h6>
+            <h6 class="font-weight-bold">{{ soft.percentual }}%</h6>
+          </div>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              [ngClass]="{
+                'bg-primary': soft.percentual >= 85,
+                'bg-warning': soft.percentual >= 75 && soft.percentual < 85,
+                'bg-danger': soft.percentual < 75
+              }"
+              [ngStyle]="{ width: soft.percentual + '%' }"
+              role="progressbar"
+              aria-valuenow="95"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
